@@ -1,0 +1,26 @@
+- title: "Masterclass & Residency"
+  date: "2026-01-15"
+  venue: "Juilliard School"
+  location: "New York, NY"
+  past: false
+
+- title: "Piano Concerto No. 3 — World Premiere"
+  date: "2025-09-14"
+  venue: "Carnegie Hall"
+  location: "New York, NY"
+  ticketURL: "https://carnegiehall.org"
+  past: false
+
+- title: "Solo Recital — Wigmore Series"
+  date: "2025-10-22"
+  venue: "Wigmore Hall"
+  location: "London, UK"
+  ticketURL: "https://wigmore-hall.org.uk"
+  past: false
+
+- title: "String Quartet No. 2 — European Tour"
+  date: "2025-11-08"
+  venue: "Concertgebouw"
+  location: "Amsterdam, NL"
+  url: "/events/concertgebouw-2025/"
+  past: false

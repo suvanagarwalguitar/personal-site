@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'header';
+@import 'masthead';
+@import 'home';
+@import 'footer';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-body;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a { color: inherit; }
+
+.lang-hidden { display: none; }
+
+body.lang-ja {
+  font-family: $font-body-ja;
+
+  .site-nav__link,
+  .site-nav__lang {
+    font-family: $font-body-ja;
+  }
+
+  .bio__heading,
+  .event-dock__title,
+  .page-content__title,
+  .gallery__group-title,
+  .resume__name,
+  .resume__section-title,
+  .masthead-home__role,
+  .masthead-home__quote {
+    font-family: $font-display-ja;
+  }
+}
+
+::selection {
+  background: $color-accent;
+  color: $color-white;
+}

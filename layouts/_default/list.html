@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="page-content">
+      <h1 class="page-content__title">{{ .Title }}</h1>
+      <div class="page-content__body">
+        {{ if .Content }}
+          {{ .Content }}
+        {{ else }}
+          <p class="page-content__placeholder">{{ partial "i18n.html" "comingSoon" }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

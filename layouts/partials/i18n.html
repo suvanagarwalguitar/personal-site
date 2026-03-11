@@ -1,0 +1,3 @@
+{{- $en := index site.Data.strings_en . -}}
+{{- $ja := index site.Data.strings_ja . -}}
+<span data-en="{{ $en }}" data-ja="{{ $ja }}">{{ $en }}</span>

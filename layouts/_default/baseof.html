@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}" style="background-color:#181a1c">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{- if .IsHome -}}
+      {{ .Site.Title }}
+    {{- else -}}
+      {{ .Title }} | {{ .Site.Title }}
+    {{- end -}}
+  </title>
+
+  {{ $scss := resources.Get "scss/main.scss" }}
+  {{ $css  := $scss | css.Sass | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Lato:wght@400;700&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+</head>
+<body>
+  <div class="site-wrapper">
+    {{ block "main" . }}{{ end }}
+  </div>
+  <script>
+  (function () {
+    var lang = localStorage.getItem('lang') || 'en';
+
+    function setLang(l) {
+      lang = l;
+      localStorage.setItem('lang', l);
+      document.body.classList.toggle('lang-ja', l === 'ja');
+      document.querySelectorAll('[data-en][data-ja]').forEach(function (el) {
+        el.textContent = el.dataset[l];
+      });
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        if (el.dataset.lang === l) {
+          el.classList.remove('lang-hidden');
+        } else {
+          el.classList.add('lang-hidden');
+        }
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      setLang(lang === 'en' ? 'ja' : 'en');
+    });
+
+    setLang(lang);
+
+    /* ── SPA-style client-side navigation ── */
+
+    var container = document.querySelector('.home-container');
+    var parser = new DOMParser();
+    var navigating = false;
+
+    function updateActiveNav(url) {
+      var path = new URL(url, location.origin).pathname;
+      document.querySelectorAll('.site-nav__link').forEach(function (a) {
+        var linkPath = new URL(a.href, location.origin).pathname;
+        if (path === linkPath) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+    }
+
+    function runPageScripts() {
+      container.querySelectorAll('script').forEach(function (old) {
+        var s = document.createElement('script');
+        s.textContent = old.textContent;
+        old.parentNode.replaceChild(s, old);
+      });
+    }
+
+    function navigateTo(url, pushState) {
+      if (navigating) return;
+      navigating = true;
+
+      fetch(url)
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+          var doc = parser.parseFromString(html, 'text/html');
+          var newContainer = doc.querySelector('.home-container');
+          if (newContainer) {
+            container.innerHTML = newContainer.innerHTML;
+
+            var newTitle = doc.querySelector('title');
+            if (newTitle) document.title = newTitle.textContent;
+
+            if (pushState) {
+              history.pushState(null, '', url);
+            }
+
+            updateActiveNav(url);
+            setLang(lang);
+            runPageScripts();
+            window.scrollTo(0, 0);
+          } else {
+            location.href = url;
+          }
+          navigating = false;
+        })
+        .catch(function () {
+          location.href = url;
+          navigating = false;
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      if (link.target === '_blank' || link.hasAttribute('download')) return;
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+
+      var url;
+      try { url = new URL(href, location.origin); } catch (_) { return; }
+      if (url.origin !== location.origin) return;
+      if (url.pathname === location.pathname) return;
+
+      e.preventDefault();
+      navigateTo(url.href, true);
+    });
+
+    window.addEventListener('popstate', function () {
+      navigateTo(location.href, false);
+    });
+  })();
+  </script>
+</body>
+</html>

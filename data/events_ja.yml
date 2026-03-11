@@ -1,0 +1,26 @@
+- title: "マスタークラス＆レジデンシー"
+  date: "2026-01-15"
+  venue: "ジュリアード音楽院"
+  location: "ニューヨーク、NY"
+  past: false
+
+- title: "ピアノ協奏曲第3番 — 世界初演"
+  date: "2025-09-14"
+  venue: "カーネギーホール"
+  location: "ニューヨーク、NY"
+  ticketURL: "https://carnegiehall.org"
+  past: false
+
+- title: "ソロリサイタル — ウィグモアシリーズ"
+  date: "2025-10-22"
+  venue: "ウィグモアホール"
+  location: "ロンドン、英国"
+  ticketURL: "https://wigmore-hall.org.uk"
+  past: false
+
+- title: "弦楽四重奏曲第2番 — ヨーロッパツアー"
+  date: "2025-11-08"
+  venue: "コンセルトヘボウ"
+  location: "アムステルダム、オランダ"
+  url: "/events/concertgebouw-2025/"
+  past: false

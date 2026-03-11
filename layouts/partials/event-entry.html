@@ -1,0 +1,28 @@
+{{- $event := . -}}
+{{- $parsedDate := time $event.date -}}
+{{- $isPast := $event.past | default false -}}
+
+<article class="event-card{{ if $isPast }} event-card--past{{ end }}">
+  <div class="event-card__date">
+    <span class="event-card__day">{{ $parsedDate.Format "02" }}</span>
+    <span class="event-card__month">{{ $parsedDate.Format "Jan" }}</span>
+    <span class="event-card__year">{{ $parsedDate.Format "2006" }}</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">{{ $event.title }}</p>
+    {{- with $event.venue -}}<p class="event-card__venue">{{ . }}</p>{{- end -}}
+    {{- with $event.location -}}<p class="event-card__location">{{ . }}</p>{{- end -}}
+  </div>
+  <div class="event-card__cta">
+    {{- if $isPast -}}
+      <span class="event-card__btn event-card__btn--past">{{ partial "i18n.html" "past" }}</span>
+    {{- else -}}
+      {{- $link := $event.ticketURL | default $event.url -}}
+      {{- if $link -}}
+        <a href="{{ $link }}" class="event-card__btn" target="_blank" rel="noopener noreferrer">{{ partial "i18n.html" "tickets" }}</a>
+      {{- else -}}
+        <span class="event-card__btn event-card__btn--tba">{{ partial "i18n.html" "tba" }}</span>
+      {{- end -}}
+    {{- end -}}
+  </div>
+</article>

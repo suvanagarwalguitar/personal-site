@@ -1,0 +1,98 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="page-content">
+      <h1 class="page-content__title">{{ partial "i18n.html" "photos" }}</h1>
+
+      {{- $files := os.ReadDir "static/images/photos" -}}
+      {{- $landscape := slice -}}
+      {{- $portrait := slice -}}
+      {{- $square := slice -}}
+
+      {{- range $files -}}
+        {{- if not .IsDir -}}
+          {{- $ext := path.Ext .Name | lower -}}
+          {{- if or (eq $ext ".jpg") (eq $ext ".jpeg") (eq $ext ".png") (eq $ext ".webp") -}}
+            {{- $cfg := imageConfig (printf "static/images/photos/%s" .Name) -}}
+            {{- $ratio := div (float $cfg.Width) (float $cfg.Height) -}}
+            {{- if gt $ratio 1.1 -}}
+              {{- $landscape = $landscape | append .Name -}}
+            {{- else if lt $ratio 0.9 -}}
+              {{- $portrait = $portrait | append .Name -}}
+            {{- else -}}
+              {{- $square = $square | append .Name -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- if $landscape -}}
+      <h2 class="gallery__group-title">{{ partial "i18n.html" "landscape" }}</h2>
+      <div class="gallery gallery--landscape">
+        {{- range $landscape -}}
+        <div class="gallery__item">
+          <img src="/images/photos/{{ . }}" alt="{{ . }}" loading="lazy">
+          <div class="gallery__overlay">
+            <a href="/images/photos/{{ . }}" download class="gallery__badge gallery__badge--download">
+              <i class="fa-solid fa-download"></i> {{ partial "i18n.html" "download" }}
+            </a>
+            <span class="gallery__badge gallery__badge--dimensions" data-src="/images/photos/{{ . }}"></span>
+          </div>
+        </div>
+        {{- end -}}
+      </div>
+      {{- end -}}
+
+      {{- if $portrait -}}
+      <h2 class="gallery__group-title">{{ partial "i18n.html" "portrait" }}</h2>
+      <div class="gallery gallery--portrait">
+        {{- range $portrait -}}
+        <div class="gallery__item">
+          <img src="/images/photos/{{ . }}" alt="{{ . }}" loading="lazy">
+          <div class="gallery__overlay">
+            <a href="/images/photos/{{ . }}" download class="gallery__badge gallery__badge--download">
+              <i class="fa-solid fa-download"></i> {{ partial "i18n.html" "download" }}
+            </a>
+            <span class="gallery__badge gallery__badge--dimensions" data-src="/images/photos/{{ . }}"></span>
+          </div>
+        </div>
+        {{- end -}}
+      </div>
+      {{- end -}}
+
+      {{- if $square -}}
+      <h2 class="gallery__group-title">{{ partial "i18n.html" "square" }}</h2>
+      <div class="gallery gallery--square">
+        {{- range $square -}}
+        <div class="gallery__item">
+          <img src="/images/photos/{{ . }}" alt="{{ . }}" loading="lazy">
+          <div class="gallery__overlay">
+            <a href="/images/photos/{{ . }}" download class="gallery__badge gallery__badge--download">
+              <i class="fa-solid fa-download"></i> {{ partial "i18n.html" "download" }}
+            </a>
+            <span class="gallery__badge gallery__badge--dimensions" data-src="/images/photos/{{ . }}"></span>
+          </div>
+        </div>
+        {{- end -}}
+      </div>
+      {{- end -}}
+
+    </div>
+    <script>
+    (function () {
+      document.querySelectorAll('.gallery__badge--dimensions').forEach(function (el) {
+        if (el.textContent) return;
+        var img = new Image();
+        img.onload = function () {
+          el.textContent = img.naturalWidth + ' × ' + img.naturalHeight;
+        };
+        img.src = el.dataset.src;
+      });
+    })();
+    </script>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

@@ -1,0 +1,4 @@
+{{- $year := now.Format "2006" -}}
+<footer class="site-footer">
+  <p>&copy; {{ $year }} {{ .Site.Params.copyrightName | default .Site.Title }}. {{ partial "i18n.html" "allRightsReserved" }}</p>
+</footer>

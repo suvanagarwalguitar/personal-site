@@ -1,0 +1,117 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    {{- $p := site.Data.profile -}}
+    {{- $pJa := site.Data.profile_ja -}}
+
+    <div class="resume" data-lang="en">
+
+      <header class="resume__header">
+        <h1 class="resume__name">{{ $p.name }}</h1>
+        <p class="resume__pronunciation">{{ partial "i18n.html" "pronounced" }} <em>{{ $p.pronunciation }}</em></p>
+        <ul class="resume__meta">
+          <li>{{ partial "i18n.html" "born" }} {{ $p.birthYear }}</li>
+          <li>{{ $p.hometown }}</li>
+          <li>{{ delimit $p.languages ", " }}</li>
+        </ul>
+      </header>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "education" }}</h2>
+        {{- range $p.education -}}
+        <div class="resume__entry">
+          <span class="resume__entry-main">
+            <strong>{{ .institution }}</strong>
+            {{- with .degree }}, {{ . }}{{ end -}}
+          </span>
+          {{- with .note -}}<span class="resume__entry-note">{{ . }}</span>{{- end -}}
+        </div>
+        {{- end -}}
+      </section>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "repertoire" }}</h2>
+        {{- range $p.repertoire -}}
+        <details class="resume__repertoire-group">
+          <summary class="resume__composer">{{ .composer }} <span class="resume__count">({{ len .works }})</span></summary>
+          <ul class="resume__works">
+            {{- range .works -}}
+            <li>{{ . }}</li>
+            {{- end -}}
+          </ul>
+        </details>
+        {{- end -}}
+      </section>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "experience" }}</h2>
+        {{- range $p.experience -}}
+        <div class="resume__entry">
+          <span class="resume__entry-main">
+            <strong>{{ .role }}</strong>, {{ .org }}
+          </span>
+          <span class="resume__entry-note">{{ .dates }}</span>
+        </div>
+        {{- end -}}
+      </section>
+
+    </div>
+
+    <div class="resume lang-hidden" data-lang="ja">
+
+      <header class="resume__header">
+        <h1 class="resume__name">{{ $pJa.name }}</h1>
+        <p class="resume__pronunciation">{{ partial "i18n.html" "pronounced" }} <em>{{ $pJa.pronunciation }}</em></p>
+        <ul class="resume__meta">
+          <li>{{ partial "i18n.html" "born" }} {{ $pJa.birthYear }}</li>
+          <li>{{ $pJa.hometown }}</li>
+          <li>{{ delimit $pJa.languages ", " }}</li>
+        </ul>
+      </header>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "education" }}</h2>
+        {{- range $pJa.education -}}
+        <div class="resume__entry">
+          <span class="resume__entry-main">
+            <strong>{{ .institution }}</strong>
+            {{- with .degree }}, {{ . }}{{ end -}}
+          </span>
+          {{- with .note -}}<span class="resume__entry-note">{{ . }}</span>{{- end -}}
+        </div>
+        {{- end -}}
+      </section>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "repertoire" }}</h2>
+        {{- range $pJa.repertoire -}}
+        <details class="resume__repertoire-group">
+          <summary class="resume__composer">{{ .composer }} <span class="resume__count">({{ len .works }})</span></summary>
+          <ul class="resume__works">
+            {{- range .works -}}
+            <li>{{ . }}</li>
+            {{- end -}}
+          </ul>
+        </details>
+        {{- end -}}
+      </section>
+
+      <section class="resume__section">
+        <h2 class="resume__section-title">{{ partial "i18n.html" "experience" }}</h2>
+        {{- range $pJa.experience -}}
+        <div class="resume__entry">
+          <span class="resume__entry-main">
+            <strong>{{ .role }}</strong>, {{ .org }}
+          </span>
+          <span class="resume__entry-note">{{ .dates }}</span>
+        </div>
+        {{- end -}}
+      </section>
+
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

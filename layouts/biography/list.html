@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="page-content">
+      <h1 class="page-content__title">{{ partial "i18n.html" "biography" }}</h1>
+      <div class="page-content__body">
+        <div data-lang="en">{{ site.Data.bio_en.text | markdownify }}</div>
+        <div class="lang-hidden" data-lang="ja">{{ site.Data.bio_ja.text | markdownify }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

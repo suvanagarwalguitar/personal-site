@@ -1,0 +1,44 @@
+{{- $events := site.Data.events | default (slice) -}}
+{{- $social := site.Data.social | default (slice) -}}
+
+<div class="home-content">
+
+  <div class="bio">
+    <h2 class="bio__heading">{{ partial "i18n.html" "about" }}</h2>
+    <div class="bio__text" data-lang="en">{{ site.Data.bio_en.text | markdownify }}</div>
+    <div class="bio__text lang-hidden" data-lang="ja">{{ site.Data.bio_ja.text | markdownify }}</div>
+    {{- if $social -}}
+    <div class="bio__social">
+      {{- range $social -}}
+      <a href="{{ .url }}" class="bio__social-link" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+        <i class="{{ .icon }}"></i>
+      </a>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
+
+  <div class="event-dock">
+    <div class="event-dock__header">
+      <h2 class="event-dock__title">{{ partial "i18n.html" "upcoming" }}</h2>
+      <a href="/events/" class="event-dock__all-link">{{ partial "i18n.html" "allEvents" }}</a>
+    </div>
+    <div class="event-dock__cards">
+      {{- if $events -}}
+        <div data-lang="en">
+        {{- range first 3 $events -}}
+          {{ partial "event-entry.html" . }}
+        {{- end -}}
+        </div>
+        <div class="lang-hidden" data-lang="ja">
+        {{- range first 3 (site.Data.events_ja | default $events) -}}
+          {{ partial "event-entry.html" . }}
+        {{- end -}}
+        </div>
+      {{- else -}}
+        <p class="event-dock__empty">{{ partial "i18n.html" "noEvents" }}</p>
+      {{- end -}}
+    </div>
+  </div>
+
+</div>

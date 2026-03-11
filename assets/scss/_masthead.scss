@@ -1,0 +1,75 @@
+#masthead-spacer {
+  height: $masthead-height;
+  width: 100%;
+}
+
+.masthead-home {
+  font-size: 0;
+  background: black;
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &__inner {
+    height: $masthead-height;
+    position: relative;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: $masthead-height;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: $space-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    font-family: $font-display;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: $font-weight-regular;
+    color: $color-white;
+    line-height: $line-height-display;
+    letter-spacing: $letter-spacing-display;
+    margin: 0;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  }
+
+  &__role {
+    font-size: $font-size-lg;
+    font-style: italic;
+    color: $color-text-muted;
+    margin: -0.25em 0 0;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  }
+
+  &__quote {
+    position: absolute;
+    bottom: $space-md;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: $font-display;
+    font-style: italic;
+    font-size: $font-size-base;
+    color: $color-text-muted;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  }
+}

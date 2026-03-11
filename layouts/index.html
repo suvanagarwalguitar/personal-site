@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    {{ partial "event-dock.html" . }}
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

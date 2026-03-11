@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="resume">
+      <h1 class="resume__section-title" style="margin-bottom: 1.5rem;">{{ partial "i18n.html" "arrangements" }}</h1>
+
+      <div data-lang="en">
+      {{- range site.Data.arrangements -}}
+      <details class="resume__repertoire-group">
+        <summary class="resume__composer">{{ .category }} <span class="resume__count">({{ len .items }})</span></summary>
+        <ul class="resume__works">
+          {{- range .items -}}
+          <li>{{ . }}</li>
+          {{- end -}}
+        </ul>
+      </details>
+      {{- end -}}
+      </div>
+
+      <div class="lang-hidden" data-lang="ja">
+      {{- range site.Data.arrangements_ja -}}
+      <details class="resume__repertoire-group">
+        <summary class="resume__composer">{{ .category }} <span class="resume__count">({{ len .items }})</span></summary>
+        <ul class="resume__works">
+          {{- range .items -}}
+          <li>{{ . }}</li>
+          {{- end -}}
+        </ul>
+      </details>
+      {{- end -}}
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

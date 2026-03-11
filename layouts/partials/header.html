@@ -1,0 +1,59 @@
+<div class="site-nav-spacer" id="nav-spacer"></div>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner">
+    <ul class="site-nav__links" id="nav-links" role="list">
+      {{- range .Site.Menus.main -}}
+      {{- $key := printf "nav%s" .Name -}}
+      {{- $en := index site.Data.strings_en $key -}}
+      {{- $ja := index site.Data.strings_ja $key -}}
+      <li>
+        <a href="{{ .URL | relURL }}"
+           class="site-nav__link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+          <span data-en="{{ $en }}" data-ja="{{ $ja }}">{{ $en }}</span>
+        </a>
+      </li>
+      {{- end -}}
+    </ul>
+    <button id="lang-toggle" class="site-nav__lang" aria-label="Switch language">
+      <span data-en="日本語" data-ja="English">日本語</span>
+    </button>
+    <button class="site-nav__toggle" id="nav-toggle"
+            aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars open-icon"></i>
+      <i class="fa-solid fa-xmark close-icon"></i>
+    </button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var nav    = document.getElementById('site-nav');
+  var spacer = document.getElementById('nav-spacer');
+  var btn    = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (!nav) return;
+
+  var navTop = nav.getBoundingClientRect().top + window.scrollY;
+
+  function onScroll() {
+    if (window.scrollY >= navTop) {
+      nav.classList.add('fixed');
+      spacer.classList.add('visible');
+    } else {
+      nav.classList.remove('fixed');
+      spacer.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (btn && links) {
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('is-open', !open);
+    });
+  }
+})();
+</script>

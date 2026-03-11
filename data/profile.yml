@@ -1,0 +1,110 @@
+name: "Suvan Agarwal"
+pronunciation: "soo-vahn ah-gar-wal"
+birthYear: 2001
+hometown: "Sunnyvale, California"
+languages:
+  - English
+  - Japanese
+
+education:
+  - institution: "The Juilliard School"
+    degree: "MM in Guitar"
+    note: "expected 2027"
+  - institution: "Royal Conservatoire of Scotland"
+    degree: "PGDip in Guitar"
+    note: "2025"
+  - institution: "Oberlin Conservatory"
+    degree: "BM in Guitar"
+    note: "2024"
+  - institution: "Oberlin College"
+    degree: "BA in Physics"
+    note: "2024"
+  - institution: "Homestead High School"
+    degree: ""
+    note: "2019"
+
+repertoire:
+  - composer: "J.S. Bach"
+    works:
+      - "BWV 1004 D minor violin partita (all movements, arr Suvan Agarwal)"
+      - "BWV 998 E flat major lute suite (all movements, arr Frank Koonce)"
+      - "BWV 1006 E major lute suite (all movements, arr Frank Koonce)"
+      - "BWV 645 Awake, the voice is calling us (arr David Russell)"
+      - "BWV 156 I stand with one foot in the grave (arr David Russell)"
+      - "BWV 973 Concerto transcription after Vivaldi (all movements, arr Suvan Agarwal)"
+      - "BWV 964 D minor keyboard sonata (arr Suvan Agarwal) — Andante"
+      - "BWV 1005 C major violin sonata (arr Suvan Agarwal) — Largo"
+      - "BWV 825 B flat major keyboard partita (all movements, arr Tilman Hoppstock)"
+  - composer: "Domenico Scarlatti"
+    works:
+      - "Sonata K.27 (arr Eliot Fisk)"
+      - "Sonata K.209 (arr Manuel Barrueco)"
+  - composer: "Joseph Haydn"
+    works:
+      - "Sonata Hob.XVI:28 (all movements, arranged by Gabriel Balogh/Suvan Agarwal)"
+  - composer: "Franz Schubert"
+    works:
+      - "Sonata for Arpeggione and Piano in A minor (all movements, arpeggione part arranged for guitar by Suvan Agarwal)"
+  - composer: "Robert Schumann"
+    works:
+      - "Kinderszenen (all movements, arr Suvan Agarwal)"
+  - composer: "Joaquin Rodrigo"
+    works:
+      - "Concierto de Aranjuez (all movements)"
+  - composer: "Paulo Bellinati"
+    works:
+      - "Coco de Alagoas"
+  - composer: "Agustin Barrios"
+    works:
+      - "Sueno en la Floresta"
+      - "Mazurka Appasionata"
+      - "La Catedral"
+  - composer: "Anton Diabelli"
+    works:
+      - "Sonata in A minor (Bream edit, all movements)"
+      - "Allegro Moderato from Sonata in F minor"
+  - composer: "Giacomo Susani"
+    works:
+      - "The Blue Madeleine"
+      - "Familiar Dreams"
+      - "Aria"
+      - "Cypresses"
+  - composer: "Giulio Regondi"
+    works:
+      - "Ten Etudes — Etude 1"
+      - "Ten Etudes — Etude 8"
+  - composer: "Toru Takemitsu"
+    works:
+      - "In The Woods — Wainscot Pond"
+  - composer: "Manuel Ponce"
+    works:
+      - "Sonata Romantica (all movements)"
+      - "Prelude and Ballet"
+  - composer: "Leo Brouwer"
+    works:
+      - "Sonata 1 (all movements)"
+  - composer: "Mauro Giuliani"
+    works:
+      - "Grand Overture Op. 61"
+  - composer: "Heitor Villa Lobos"
+    works:
+      - "12 Etudes — Etude 1"
+      - "12 Etudes — Etude 7"
+      - "Suite Popular Brasileira — Gavota Choro"
+
+experience:
+  - dates: "Mar 2020 – June 2024"
+    org: "Oberlin College Computer and Information Technology Department"
+    role: "Help Desk Technician"
+  - dates: "Jun 2023 – Aug 2023"
+    org: "University of Tokyo Earthquake Research Institute, Shingo Watada Lab"
+    role: "Research Intern"
+  - dates: "May 2022 – Jul 2022"
+    org: "Hawaii Institute of Geophysics and Planetology at University of Hawaii at Manoa, Shiv Sharma Lab"
+    role: "Research Intern"
+  - dates: "Jan 2021 – Jul 2021"
+    org: "Oberlin College Department of Physics, Stephen Fitzgerald Lab"
+    role: "Research Assistant"
+  - dates: "Apr 2015 – Jul 2019"
+    org: "Fairbrae Manta Rays Swim Team"
+    role: "Assistant Swim Coach"

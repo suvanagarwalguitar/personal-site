@@ -1,0 +1,47 @@
+baseURL       = "https://example.com/"
+languageCode  = "en-us"
+title         = "Suvan Agarwal"
+
+[[menus.main]]
+  name   = "Home"
+  url    = "/"
+  weight = 10
+
+[[menus.main]]
+  name   = "Biography"
+  url    = "/biography/"
+  weight = 20
+
+[[menus.main]]
+  name   = "Events"
+  url    = "/events/"
+  weight = 30
+
+[[menus.main]]
+  name   = "Photos"
+  url    = "/photos/"
+  weight = 40
+
+[[menus.main]]
+  name   = "Profile"
+  url    = "/profile/"
+  weight = 50
+
+[[menus.main]]
+  name   = "Awards"
+  url    = "/awards/"
+  weight = 60
+
+[[menus.main]]
+  name   = "Arrangements"
+  url    = "/arrangements/"
+  weight = 70
+
+[params]
+  nameFirst      = "Suvan"
+  nameLast       = "Agarwal"
+  role           = "Guitarist"
+  copyrightName  = "Suvan Agarwal"
+  mastheadImage  = "/images/masthead.png"
+  mastheadTitle  = "Suvan Agarwal"
+

@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="page-content">
+      <h1 class="page-content__title">{{ partial "i18n.html" "events" }}</h1>
+      <div class="events-grid">
+        {{- $events := site.Data.events | default (slice) -}}
+        {{- $eventsJa := site.Data.events_ja | default (slice) -}}
+        {{- if $events -}}
+          <div data-lang="en">
+          {{- range $events -}}
+            {{ partial "event-entry.html" . }}
+          {{- end -}}
+          </div>
+          <div class="lang-hidden" data-lang="ja">
+          {{- range ($eventsJa | default $events) -}}
+            {{ partial "event-entry.html" . }}
+          {{- end -}}
+          </div>
+        {{- else -}}
+          <p class="event-dock__empty">{{ partial "i18n.html" "noEventsListed" }}</p>
+        {{- end -}}
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}
