@@ -4,7 +4,6 @@
   {{ partial "header.html" . }}
   <div class="home-container">
     <div class="page-content">
-      <h1 class="page-content__title">{{ partial "i18n.html" "events" }}</h1>
       <div class="events-grid">
         {{- $events := site.Data.events | default (slice) -}}
         {{- $eventsJa := site.Data.events_ja | default (slice) -}}

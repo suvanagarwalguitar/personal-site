@@ -23,8 +23,8 @@ title         = "Suvan Agarwal"
   weight = 40
 
 [[menus.main]]
-  name   = "Profile"
-  url    = "/profile/"
+  name   = "Reviews"
+  url    = "/reviews/"
   weight = 50
 
 [[menus.main]]

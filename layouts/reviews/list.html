@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{ partial "masthead-home.html" . }}
+<div id="home-main">
+  {{ partial "header.html" . }}
+  <div class="home-container">
+    <div class="page-content">
+      <div class="reviews" data-lang="en">
+        {{- range site.Data.reviews -}}
+        <div class="review">
+          <p class="review__display">{{ .display }}</p>
+          <p class="review__source">&mdash; {{ .source }}</p>
+          <details class="review__details">
+            <summary class="review__toggle">{{ partial "i18n.html" "readMore" }}</summary>
+            <div class="review__full-wrap">
+              <div class="review__full-inner">
+                <p class="review__full">{{ .quote }}</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        {{- end -}}
+      </div>
+      <div class="reviews lang-hidden" data-lang="ja">
+        {{- range site.Data.reviews_ja -}}
+        <div class="review">
+          <p class="review__display">{{ .display }}</p>
+          <p class="review__source">&mdash; {{ .source }}</p>
+          <details class="review__details">
+            <summary class="review__toggle">{{ partial "i18n.html" "readMore" }}</summary>
+            <div class="review__full-wrap">
+              <div class="review__full-inner">
+                <p class="review__full">{{ .quote }}</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        {{- end -}}
+      </div>
+    </div>
+    <script>
+    (function () {
+      document.querySelectorAll('.review__details').forEach(function (d) {
+        d.querySelector('.review__toggle').addEventListener('click', function (e) {
+          if (!d.open) return;
+          e.preventDefault();
+          var wrap = d.querySelector('.review__full-wrap');
+          wrap.style.gridTemplateRows = '0fr';
+          wrap.style.opacity = '0';
+          wrap.addEventListener('transitionend', function handler() {
+            wrap.removeEventListener('transitionend', handler);
+            d.open = false;
+            wrap.style.gridTemplateRows = '';
+            wrap.style.opacity = '';
+          });
+        });
+      });
+    })();
+    </script>
+  </div>
+</div>
+{{ partial "footer.html" . }}
+{{ end }}

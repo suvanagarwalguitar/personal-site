@@ -4,7 +4,6 @@
   {{ partial "header.html" . }}
   <div class="home-container">
     <div class="page-content">
-      <h1 class="page-content__title">{{ partial "i18n.html" "photos" }}</h1>
 
       {{- $files := os.ReadDir "static/images/photos" -}}
       {{- $landscape := slice -}}

@@ -12,19 +12,12 @@
   max-width: $max-width;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   gap: $space-2xl;
-
-  @media (max-width: $bp-lg) {
-    flex-direction: column;
-    gap: $space-2xl;
-  }
 }
 
 .bio {
-  flex: 3 1 0;
-  min-width: 0;
-
-  @media (max-width: $bp-lg) { flex: none; width: 100%; }
+  width: 100%;
 
   &__heading {
     font-family: $font-display;
@@ -35,29 +28,78 @@
     line-height: 1;
   }
 
+  &__row {
+    display: flex;
+    gap: $space-2xl;
+    align-items: center;
+
+    @media (max-width: $bp-md) {
+      flex-direction: column;
+      gap: $space-xl;
+    }
+  }
+
+  &__text-col {
+    flex: 3 1 0;
+    min-width: 0;
+
+    @media (max-width: $bp-md) { flex: none; width: 100%; }
+  }
+
   &__text {
     font-size: $font-size-sm;
     color: $color-text-muted;
     p { margin: 0 0 $space-sm; &:last-child { margin: 0; } }
   }
+}
 
-  &__social {
-    display: flex;
-    gap: $space-md;
-    margin-top: $space-lg;
+.contact-box {
+  flex: 1 1 0;
+  min-width: 0;
+  background: $color-bg-card;
+  border: $border-thin;
+  border-radius: 4px;
+  padding: $space-xl;
+
+  @media (max-width: $bp-md) { flex: none; width: 100%; }
+
+  &__heading {
+    font-family: $font-display;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    margin: 0 0 $space-lg;
+    line-height: 1;
   }
 
-  &__social-link {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
     color: $color-text-muted;
-    font-size: $font-size-lg;
+    text-decoration: none;
+    font-size: $font-size-sm;
     transition: color $transition-fast;
+
     &:hover { color: $color-text; }
+  }
+
+  &__icon {
+    width: 1.25em;
+    text-align: center;
+    font-size: $font-size-base;
   }
 }
 
 .event-dock {
-  flex: 3 1 0;
-  min-width: 0;
+  width: 100%;
 
   &__header {
     display: flex;
@@ -196,6 +238,10 @@
     margin: 0 auto;
 
     p { margin: 0 0 $space-md; &:last-child { margin: 0; } }
+
+    &--bio {
+      font-size: $font-size-sm;
+    }
   }
 
   &__placeholder {
@@ -292,6 +338,15 @@
 
   &__header {
     margin-bottom: $space-2xl;
+  }
+
+  &__bio {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    line-height: $line-height-body;
+    margin-bottom: $space-2xl;
+
+    p { margin: 0 0 $space-sm; &:last-child { margin: 0; } }
   }
 
   &__name {
@@ -409,4 +464,79 @@
       padding: 2px 0;
     }
   }
+}
+
+.reviews {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.review {
+  text-align: center;
+  margin: 0 0 $space-2xl;
+
+  &:last-child { margin-bottom: 0; }
+
+  &__display {
+    font-style: italic;
+    font-size: $font-size-lg;
+    color: $color-text-muted;
+    line-height: $line-height-body;
+    margin: 0;
+  }
+
+  &__source {
+    font-style: normal;
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin: $space-sm 0 0;
+  }
+
+  &__details {
+    margin-top: $space-md;
+  }
+
+  &__toggle {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    cursor: pointer;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-ui;
+    transition: color $transition-fast;
+
+    &::-webkit-details-marker { display: none; }
+    &::marker { display: none; content: ''; }
+
+    &:hover { color: $color-text; }
+  }
+
+  &__full-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 300ms ease, opacity 300ms ease;
+  }
+
+  &__full-inner {
+    overflow: hidden;
+  }
+
+  &__full {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    line-height: $line-height-body;
+    font-style: normal;
+    background: $color-bg-card;
+    border: $border-thin;
+    border-radius: 4px;
+    padding: $space-lg;
+    margin-top: $space-md;
+  }
+
+}
+
+.review__details[open] > .review__full-wrap {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
