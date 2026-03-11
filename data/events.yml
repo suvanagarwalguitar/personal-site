@@ -1,7 +1,7 @@
-- title: "Columbus Guitar Symposium Semifinal Round"
+- title: "CSU Guitar Symposium"
   date: "2026-03-01"
   venue: "Schwob School of Music at Columbus State University"
-  location: "Columbus, Georgia"
+  location: "Columbus, GA"
   past: true
 
 - title: "Tokyo International Guitar Competition Final Round"
@@ -18,9 +18,23 @@
   ticketURL: "https://hakujuhall.jp/concerts/event/4308 "
   past: true
 
-- title: "Tokyo International Guitar Competition Semifinal Round"
-  date: "2025-12-06"
-  venue: "Hakuju Hall"
-  location: "Tokyo, Japan"
-  ticketURL: "https://hakujuhall.jp/concerts/event/4308 "
+- title: "Chamber Music Recital at The Juilliard School"
+  date: "2025-11-19"
+  venue: "Paul Hall"
+  location: "New York City, NY"
+  ticketURL: "https://www.juilliard.edu/event/182931/mxe-chamber-music-recital"
+  past: true
+
+- title: "URI Guitar Festival"
+  date: "2025-10-26"
+  venue: "University of Rhode Island"
+  location: "Kingstown, RI"
+  ticketURL: "https://www.juilliard.edu/event/182931/mxe-chamber-music-recital"
+  past: true
+
+- title: "Louisville Guitar Festival"
+  date: "2025-10-12"
+  venue: "University of Louisville"
+  location: "Louisville, KY"
+  ticketURL: "https://music.louisville.edu/community/events/guitar-festival"
   past: true

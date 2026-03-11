@@ -1,26 +1,40 @@
-- title: "マスタークラス＆レジデンシー"
-  date: "2026-01-15"
-  venue: "ジュリアード音楽院"
-  location: "ニューヨーク、NY"
-  past: false
+- title: "CSUギター・シンポジウム"
+  date: "2026-03-01"
+  venue: "コロンバス州立大学シュウォブ音楽学校"
+  location: "ジョージア州コロンバス"
+  past: true
 
-- title: "ピアノ協奏曲第3番 — 世界初演"
-  date: "2025-09-14"
-  venue: "カーネギーホール"
-  location: "ニューヨーク、NY"
-  ticketURL: "https://carnegiehall.org"
-  past: false
+- title: "東京国際ギターコンクール決勝"
+  date: "2025-12-07"
+  venue: "白寿ホール"
+  location: "東京"
+  ticketURL: "https://hakujuhall.jp/concerts/event/4309"
+  past: true
 
-- title: "ソロリサイタル — ウィグモアシリーズ"
-  date: "2025-10-22"
-  venue: "ウィグモアホール"
-  location: "ロンドン、英国"
-  ticketURL: "https://wigmore-hall.org.uk"
-  past: false
+- title: "東京国際ギターコンクール準決勝"
+  date: "2025-12-06"
+  venue: "白寿ホール"
+  location: "東京"
+  ticketURL: "https://hakujuhall.jp/concerts/event/4308"
+  past: true
 
-- title: "弦楽四重奏曲第2番 — ヨーロッパツアー"
-  date: "2025-11-08"
-  venue: "コンセルトヘボウ"
-  location: "アムステルダム、オランダ"
-  url: "/events/concertgebouw-2025/"
-  past: false
+- title: "ジュリアード音楽院室内楽リサイタル"
+  date: "2025-11-19"
+  venue: "ポール・ホール"
+  location: "ニューヨーク州ニューヨーク市"
+  ticketURL: "https://www.juilliard.edu/event/182931/mxe-chamber-music-recital"
+  past: true
+
+- title: "URIギター・フェスティバル"
+  date: "2025-10-26"
+  venue: "ロードアイランド大学"
+  location: "ロードアイランド州キングスタウン"
+  ticketURL: "https://www.juilliard.edu/event/182931/mxe-chamber-music-recital"
+  past: true
+
+- title: "ルイビル・ギター・フェスティバル"
+  date: "2025-10-12"
+  venue: "ルイビル大学"
+  location: "ケンタッキー州ルイビル"
+  ticketURL: "https://music.louisville.edu/community/events/guitar-festival"
+  past: true
