@@ -1,26 +1,19 @@
-- title: "Masterclass & Residency"
-  date: "2026-01-15"
-  venue: "Juilliard School"
-  location: "New York, NY"
+- title: "Columbus Guitar Symposium Semifinal Round"
+  date: "2026-03-01"
+  venue: "Schwob School of Music at Columbus State University"
+  location: "Columbus, Georgia"
+  past: true
+
+- title: "Tokyo International Guitar Competition Final Round"
+  date: "2025-12-07"
+  venue: "Hakuju Hall"
+  location: "Tokyo, Japan"
+  ticketURL: "https://hakujuhall.jp/concerts/event/4309"
   past: false
 
-- title: "Piano Concerto No. 3 — World Premiere"
-  date: "2025-09-14"
-  venue: "Carnegie Hall"
-  location: "New York, NY"
-  ticketURL: "https://carnegiehall.org"
-  past: false
-
-- title: "Solo Recital — Wigmore Series"
-  date: "2025-10-22"
-  venue: "Wigmore Hall"
-  location: "London, UK"
-  ticketURL: "https://wigmore-hall.org.uk"
-  past: false
-
-- title: "String Quartet No. 2 — European Tour"
-  date: "2025-11-08"
-  venue: "Concertgebouw"
-  location: "Amsterdam, NL"
-  url: "/events/concertgebouw-2025/"
+  title: "Tokyo International Guitar Competition Semifinal Round"
+  date: "2025-12-06"
+  venue: "Hakuju Hall"
+  location: "Tokyo, Japan"
+  ticketURL: "https://hakujuhall.jp/concerts/event/4308 "
   past: false
