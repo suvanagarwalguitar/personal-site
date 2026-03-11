@@ -19,6 +19,9 @@
 
       <div class="resume__bio">
         {{ site.Data.bio_en.text | markdownify }}
+        {{- with site.Data.bio_en.lastUpdated -}}
+        <p class="resume__last-updated">{{ . }}</p>
+        {{- end -}}
       </div>
 
       <section class="resume__section">
@@ -74,6 +77,9 @@
 
       <div class="resume__bio">
         {{ site.Data.bio_ja.text | markdownify }}
+        {{- with site.Data.bio_ja.lastUpdated -}}
+        <p class="resume__last-updated">{{ . }}</p>
+        {{- end -}}
       </div>
 
       <section class="resume__section">

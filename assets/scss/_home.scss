@@ -337,16 +337,23 @@
   margin: 0 auto;
 
   &__header {
-    margin-bottom: $space-2xl;
+    margin-bottom: $space-md;
   }
 
   &__bio {
     font-size: $font-size-sm;
     color: $color-text-muted;
     line-height: $line-height-body;
-    margin-bottom: $space-2xl;
+    margin-bottom: $space-xl;
 
     p { margin: 0 0 $space-sm; &:last-child { margin: 0; } }
+  }
+
+  &__last-updated {
+    font-size: $font-size-xs;
+    font-style: italic;
+    color: darken($color-text-muted, 20%);
+    padding-top: $space-md;
   }
 
   &__name {
@@ -362,6 +369,7 @@
     font-size: $font-size-sm;
     color: $color-text-muted;
     margin: $space-xs 0 $space-md;
+    color: darken($color-text-muted, 20%);
   }
 
   &__meta {
@@ -370,7 +378,8 @@
     flex-wrap: wrap;
     gap: $space-sm $space-xl;
     font-size: $font-size-sm;
-    color: $color-text-muted;
+    font-style: italic;
+    color: darken($color-text-muted, 20%);
   }
 
   &__section {
