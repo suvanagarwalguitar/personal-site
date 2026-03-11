@@ -12,8 +12,8 @@
         <p class="resume__pronunciation">{{ partial "i18n.html" "pronounced" }} <em>{{ $p.pronunciation }}</em></p>
         <ul class="resume__meta">
           <li>{{ partial "i18n.html" "born" }} {{ $p.birthYear }}</li>
-          <li>{{ $p.hometown }}</li>
-          <li>{{ delimit $p.languages ", " }}</li>
+          <li>Hometown: {{ $p.hometown }}</li>
+          <li>Languages: {{ delimit $p.languages ", " }}</li>
         </ul>
       </header>
 
@@ -67,8 +67,8 @@
         <p class="resume__pronunciation">{{ partial "i18n.html" "pronounced" }} <em>{{ $pJa.pronunciation }}</em></p>
         <ul class="resume__meta">
           <li>{{ partial "i18n.html" "born" }} {{ $pJa.birthYear }}</li>
-          <li>{{ $pJa.hometown }}</li>
-          <li>{{ delimit $pJa.languages ", " }}</li>
+          <li>故郷: {{ $pJa.hometown }}</li>
+          <li>言語: {{ delimit $pJa.languages ", " }}</li>
         </ul>
       </header>
 
