@@ -5,8 +5,8 @@
 
   <div class="bio">
     <h2 class="bio__heading">{{ partial "i18n.html" "about" }}</h2>
-    <div class="bio__text" data-lang="en">{{ site.Data.bio_en.text | markdownify }}</div>
-    <div class="bio__text lang-hidden" data-lang="ja">{{ site.Data.bio_ja.text | markdownify }}</div>
+    <div class="bio__text" data-lang="en">{{ site.Data.about_en.text | markdownify }}</div>
+    <div class="bio__text lang-hidden" data-lang="ja">{{ site.Data.about_ja.text | markdownify }}</div>
     {{- if $social -}}
     <div class="bio__social">
       {{- range $social -}}
