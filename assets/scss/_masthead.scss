@@ -29,18 +29,26 @@
     width: 100%;
     height: $masthead-height;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: 60% 15%;
     display: block;
+
+    @media (min-width: $bp-md) {
+      object-position: center 15%;
+    }
   }
 
   &__title {
     position: absolute;
-    bottom: 0;
     top: 0;
+    bottom: 25%;
     left: $space-xl;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (min-width: $bp-md) {
+      bottom: 0;
+    }
   }
 
   &__name {
