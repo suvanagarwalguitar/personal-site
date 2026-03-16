@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us" style="background-color:#181a1c">
+<head>
+	<meta name="generator" content="Hugo 0.153.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suvan Agarwal</title>
+
+  
+  
+  <link rel="stylesheet" href="/scss/main.min.css">
+
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Lato:wght@400;700&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  
+  
+</head>
+<body>
+  <div class="site-wrapper">
+    
+<div id="masthead-spacer"></div>
+<div class="masthead-home">
+  <img class="masthead-home__image"
+    src="/images/masthead.png"
+    alt="Suvan Agarwal"
+    loading="eager" fetchpriority="high">
+  <div class="masthead-home__inner">
+    <div class="masthead-home__title">
+      <h1 class="masthead-home__name">Suvan Agarwal</h1><p class="masthead-home__role"><span data-en="Guitarist" data-ja="ギタリスト">Guitarist</span>
+</p></div>
+
+  </div>
+</div>
+
+<div id="home-main">
+  <div class="site-nav-spacer" id="nav-spacer"></div>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner">
+    <ul class="site-nav__links" id="nav-links" role="list"><li>
+        <a href="/"
+           class="site-nav__link">
+          <span data-en="Home" data-ja="ホーム">Home</span>
+        </a>
+      </li><li>
+        <a href="/biography/"
+           class="site-nav__link">
+          <span data-en="Biography" data-ja="経歴">Biography</span>
+        </a>
+      </li><li>
+        <a href="/events/"
+           class="site-nav__link">
+          <span data-en="Events" data-ja="公演">Events</span>
+        </a>
+      </li><li>
+        <a href="/photos/"
+           class="site-nav__link">
+          <span data-en="Photos" data-ja="写真">Photos</span>
+        </a>
+      </li><li>
+        <a href="/reviews/"
+           class="site-nav__link">
+          <span data-en="Reviews" data-ja="レビュー">Reviews</span>
+        </a>
+      </li><li>
+        <a href="/awards/"
+           class="site-nav__link">
+          <span data-en="Awards" data-ja="受賞歴">Awards</span>
+        </a>
+      </li><li>
+        <a href="/arrangements/"
+           class="site-nav__link">
+          <span data-en="Arrangements" data-ja="編曲">Arrangements</span>
+        </a>
+      </li></ul>
+    <button id="lang-toggle" class="site-nav__lang" aria-label="Switch language">
+      <span data-en="日本語" data-ja="English">日本語</span>
+    </button>
+    <button class="site-nav__toggle" id="nav-toggle"
+            aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars open-icon"></i>
+      <i class="fa-solid fa-xmark close-icon"></i>
+    </button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var nav    = document.getElementById('site-nav');
+  var spacer = document.getElementById('nav-spacer');
+  var btn    = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (!nav) return;
+
+  var navTop = nav.getBoundingClientRect().top + window.scrollY;
+
+  function onScroll() {
+    if (window.scrollY >= navTop) {
+      nav.classList.add('fixed');
+      spacer.classList.add('visible');
+    } else {
+      nav.classList.remove('fixed');
+      spacer.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (btn && links) {
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('is-open', !open);
+    });
+  }
+})();
+</script>
+
+  <div class="home-container">
+    <div class="home-content">
+
+  <div class="bio">
+    <h2 class="bio__heading"><span data-en="About" data-ja="概要">About</span>
+</h2>
+    <div class="bio__row">
+      <div class="bio__text-col">
+        <div class="bio__text" data-lang="en"><p>American guitarist Suvan Agarwal has received top prizes in major guitar competitions across three continents. He is committed to pushing the limits of the guitar as well as expanding the quality and breadth of its repertoire, and has been acclaimed for his performances of Bach and Haydn. A recent graduate of Oberlin Conservatory and the Royal Conservatoire of Scotland, he is a student at The Juilliard School as a recipient of a full scholarship.</p>
+<p>Suvan is a D&rsquo;Addario sponsored artist. He plays exclusively with D&rsquo;Addario strings on guitars by Saeid Aboutalebian.</p>
+<p>Get in touch for collaborations, concerts, functions, and other inquiries.</p>
+</div>
+        <div class="bio__text lang-hidden" data-lang="ja"><p>アメリカ人ギタリスト、スバン・アガワルは、3大陸にわたる主要なギターコンクールで上位入賞を果たしてきました。ギターの可能性を追求し、その演奏曲目の質と幅を広げることに情熱を注いでおり、バッハやハイドンの演奏で高い評価を得ています。オーバーリン大学音楽院および英国王立スコットランド音楽院を卒業後、現在は全額奨学金を得てジュリアード音楽院に在籍しています。</p>
+<p>スバンはダダリオ使用アーティストです。サイード・アブタレビアン製作のギターにダダリオの弦を使用しています。</p>
+</div>
+      </div><aside class="contact-box">
+        <h2 class="contact-box__heading"><span data-en="Contact" data-ja="お問い合わせ">Contact</span>
+</h2>
+        <ul class="contact-box__list"><li>
+            <a href="mailto:suvan@suvan.dev" class="contact-box__link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-envelope contact-box__icon"></i>
+              <span>contact@suvanagarwal.com</span>
+            </a>
+          </li><li>
+            <a href="https://www.instagram.com/suvan_agarwal/" class="contact-box__link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram contact-box__icon"></i>
+              <span>@suvan_agarwal</span>
+            </a>
+          </li><li>
+            <a href="https://www.youtube.com/@penguinplaysguitar123" class="contact-box__link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube contact-box__icon"></i>
+              <span>@penguinplaysguitar123</span>
+            </a>
+          </li></ul>
+      </aside></div>
+  </div>
+
+  <div class="event-dock">
+    <div class="event-dock__header">
+      <h2 class="event-dock__title"><span data-en="Upcoming" data-ja="今後の公演">Upcoming</span>
+</h2>
+      <a href="/events/" class="event-dock__all-link"><span data-en="All events" data-ja="すべての公演">All events</span>
+</a>
+    </div>
+    <div class="event-dock__cards"><div data-lang="en"><article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">01</span>
+    <span class="event-card__month">Mar</span>
+    <span class="event-card__year">2026</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">CSU Guitar Symposium</p><p class="event-card__venue">Schwob School of Music at Columbus State University</p><p class="event-card__location">Columbus, GA</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+<article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">07</span>
+    <span class="event-card__month">Dec</span>
+    <span class="event-card__year">2025</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">Tokyo International Guitar Competition Final Round</p><p class="event-card__venue">Hakuju Hall</p><p class="event-card__location">Tokyo, Japan</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+<article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">06</span>
+    <span class="event-card__month">Dec</span>
+    <span class="event-card__year">2025</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">Tokyo International Guitar Competition Semifinal Round</p><p class="event-card__venue">Hakuju Hall</p><p class="event-card__location">Tokyo, Japan</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+</div>
+        <div class="lang-hidden" data-lang="ja"><article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">01</span>
+    <span class="event-card__month">Mar</span>
+    <span class="event-card__year">2026</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">CSUギター・シンポジウム</p><p class="event-card__venue">コロンバス州立大学シュウォブ音楽学校</p><p class="event-card__location">ジョージア州コロンバス</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+<article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">07</span>
+    <span class="event-card__month">Dec</span>
+    <span class="event-card__year">2025</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">東京国際ギターコンクール決勝</p><p class="event-card__venue">白寿ホール</p><p class="event-card__location">東京</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+<article class="event-card event-card--past">
+  <div class="event-card__date">
+    <span class="event-card__day">06</span>
+    <span class="event-card__month">Dec</span>
+    <span class="event-card__year">2025</span>
+  </div>
+  <div class="event-card__body">
+    <p class="event-card__title">東京国際ギターコンクール準決勝</p><p class="event-card__venue">白寿ホール</p><p class="event-card__location">東京</p></div>
+  <div class="event-card__cta"><span class="event-card__btn event-card__btn--past"><span data-en="Past" data-ja="終了">Past</span>
+</span></div>
+</article>
+</div></div>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<footer class="site-footer">
+  <p>&copy; 2026 Suvan Agarwal. <span data-en="All rights reserved." data-ja="全著作権所有。">All rights reserved.</span>
+</p>
+</footer>
+
+
+  </div>
+  <script>
+  (function () {
+    var lang = localStorage.getItem('lang') || 'en';
+
+    function setLang(l) {
+      lang = l;
+      localStorage.setItem('lang', l);
+      document.body.classList.toggle('lang-ja', l === 'ja');
+      document.querySelectorAll('[data-en][data-ja]').forEach(function (el) {
+        el.textContent = el.dataset[l];
+      });
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        if (el.dataset.lang === l) {
+          el.classList.remove('lang-hidden');
+        } else {
+          el.classList.add('lang-hidden');
+        }
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      setLang(lang === 'en' ? 'ja' : 'en');
+    });
+
+    setLang(lang);
+
+     
+
+    var container = document.querySelector('.home-container');
+    var parser = new DOMParser();
+    var navigating = false;
+
+    function updateActiveNav(url) {
+      var path = new URL(url, location.origin).pathname;
+      document.querySelectorAll('.site-nav__link').forEach(function (a) {
+        var linkPath = new URL(a.href, location.origin).pathname;
+        if (path === linkPath) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+    }
+
+    function runPageScripts() {
+      container.querySelectorAll('script').forEach(function (old) {
+        var s = document.createElement('script');
+        s.textContent = old.textContent;
+        old.parentNode.replaceChild(s, old);
+      });
+    }
+
+    function navigateTo(url, pushState) {
+      if (navigating) return;
+      navigating = true;
+
+      fetch(url)
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+          var doc = parser.parseFromString(html, 'text/html');
+          var newContainer = doc.querySelector('.home-container');
+          if (newContainer) {
+            container.innerHTML = newContainer.innerHTML;
+
+            var newTitle = doc.querySelector('title');
+            if (newTitle) document.title = newTitle.textContent;
+
+            if (pushState) {
+              history.pushState(null, '', url);
+            }
+
+            updateActiveNav(url);
+            setLang(lang);
+            runPageScripts();
+            window.scrollTo(0, 0);
+          } else {
+            location.href = url;
+          }
+          navigating = false;
+        })
+        .catch(function () {
+          location.href = url;
+          navigating = false;
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      if (link.target === '_blank' || link.hasAttribute('download')) return;
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+
+      var url;
+      try { url = new URL(href, location.origin); } catch (_) { return; }
+      if (url.origin !== location.origin) return;
+      if (url.pathname === location.pathname) return;
+
+      e.preventDefault();
+      navigateTo(url.href, true);
+    });
+
+    window.addEventListener('popstate', function () {
+      navigateTo(location.href, false);
+    });
+  })();
+  </script>
+</body>
+</html>
