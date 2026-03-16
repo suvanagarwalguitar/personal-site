@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-us" style="background-color:#181a1c">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories | Suvan Agarwal</title>
+
+  
+  
+  <link rel="stylesheet" href="/scss/main.min.css">
+
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Lato:wght@400;700&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  
+  
+</head>
+<body>
+  <div class="site-wrapper">
+    
+<div id="masthead-spacer"></div>
+<div class="masthead-home">
+  <img class="masthead-home__image"
+    src="/images/masthead.webp"
+    alt="Suvan Agarwal"
+    loading="eager" fetchpriority="high">
+  <div class="masthead-home__inner">
+    <div class="masthead-home__title">
+      <h1 class="masthead-home__name">Suvan Agarwal</h1><p class="masthead-home__role"><span data-en="Guitarist" data-ja="ギタリスト">Guitarist</span>
+</p></div>
+    <p class="masthead-home__quote"><span data-en="&#34;One feels a a sense of resonance and joy in hearing Haydn played both properly and with such delight.&#34; - Gendai Guitar Magazine" data-ja="&#34;ハイドンをきちんと、そしてこんなに楽しく聴かせられることに響きと喜びを感じる。&#34; - 現代ギター">&#34;One feels a a sense of resonance and joy in hearing Haydn played both properly and with such delight.&#34; - Gendai Guitar Magazine</span>
+</p>
+  </div>
+</div>
+
+<div id="home-main">
+  <div class="site-nav-spacer" id="nav-spacer"></div>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner">
+    <ul class="site-nav__links" id="nav-links" role="list"><li>
+        <a href="/"
+           class="site-nav__link">
+          <span data-en="Home" data-ja="ホーム">Home</span>
+        </a>
+      </li><li>
+        <a href="/biography/"
+           class="site-nav__link">
+          <span data-en="Biography" data-ja="経歴">Biography</span>
+        </a>
+      </li><li>
+        <a href="/events/"
+           class="site-nav__link">
+          <span data-en="Events" data-ja="公演">Events</span>
+        </a>
+      </li><li>
+        <a href="/photos/"
+           class="site-nav__link">
+          <span data-en="Photos" data-ja="写真">Photos</span>
+        </a>
+      </li><li>
+        <a href="/reviews/"
+           class="site-nav__link">
+          <span data-en="Reviews" data-ja="レビュー">Reviews</span>
+        </a>
+      </li><li>
+        <a href="/awards/"
+           class="site-nav__link">
+          <span data-en="Awards" data-ja="受賞歴">Awards</span>
+        </a>
+      </li><li>
+        <a href="/arrangements/"
+           class="site-nav__link">
+          <span data-en="Arrangements" data-ja="編曲">Arrangements</span>
+        </a>
+      </li></ul>
+    <button id="lang-toggle" class="site-nav__lang" aria-label="Switch language">
+      <span data-en="日本語" data-ja="English">日本語</span>
+    </button>
+    <button class="site-nav__toggle" id="nav-toggle"
+            aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars open-icon"></i>
+      <i class="fa-solid fa-xmark close-icon"></i>
+    </button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var nav    = document.getElementById('site-nav');
+  var spacer = document.getElementById('nav-spacer');
+  var btn    = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (!nav) return;
+
+  var navTop = nav.getBoundingClientRect().top + window.scrollY;
+
+  function onScroll() {
+    if (window.scrollY >= navTop) {
+      nav.classList.add('fixed');
+      spacer.classList.add('visible');
+    } else {
+      nav.classList.remove('fixed');
+      spacer.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (btn && links) {
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('is-open', !open);
+    });
+  }
+})();
+</script>
+
+  <div class="home-container">
+    <div class="page-content">
+      <h1 class="page-content__title">Categories</h1>
+      <div class="page-content__body">
+        
+          <p class="page-content__placeholder"><span data-en="Coming soon." data-ja="近日公開">Coming soon.</span>
+</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <p>&copy; 2026 Suvan Agarwal. <span data-en="All rights reserved." data-ja="全著作権所有。">All rights reserved.</span>
+</p>
+</footer>
+
+
+  </div>
+  <script>
+  (function () {
+    var lang = localStorage.getItem('lang') || 'en';
+
+    function setLang(l) {
+      lang = l;
+      localStorage.setItem('lang', l);
+      document.body.classList.toggle('lang-ja', l === 'ja');
+      document.querySelectorAll('[data-en][data-ja]').forEach(function (el) {
+        el.textContent = el.dataset[l];
+      });
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        if (el.dataset.lang === l) {
+          el.classList.remove('lang-hidden');
+        } else {
+          el.classList.add('lang-hidden');
+        }
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      setLang(lang === 'en' ? 'ja' : 'en');
+    });
+
+    setLang(lang);
+
+     
+
+    var container = document.querySelector('.home-container');
+    var parser = new DOMParser();
+    var navigating = false;
+
+    function updateActiveNav(url) {
+      var path = new URL(url, location.origin).pathname;
+      document.querySelectorAll('.site-nav__link').forEach(function (a) {
+        var linkPath = new URL(a.href, location.origin).pathname;
+        if (path === linkPath) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+    }
+
+    function runPageScripts() {
+      container.querySelectorAll('script').forEach(function (old) {
+        var s = document.createElement('script');
+        s.textContent = old.textContent;
+        old.parentNode.replaceChild(s, old);
+      });
+    }
+
+    function navigateTo(url, pushState) {
+      if (navigating) return;
+      navigating = true;
+
+      fetch(url)
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+          var doc = parser.parseFromString(html, 'text/html');
+          var newContainer = doc.querySelector('.home-container');
+          if (newContainer) {
+            container.innerHTML = newContainer.innerHTML;
+
+            var newTitle = doc.querySelector('title');
+            if (newTitle) document.title = newTitle.textContent;
+
+            if (pushState) {
+              history.pushState(null, '', url);
+            }
+
+            updateActiveNav(url);
+            setLang(lang);
+            runPageScripts();
+            window.scrollTo(0, 0);
+          } else {
+            location.href = url;
+          }
+          navigating = false;
+        })
+        .catch(function () {
+          location.href = url;
+          navigating = false;
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      if (link.target === '_blank' || link.hasAttribute('download')) return;
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+
+      var url;
+      try { url = new URL(href, location.origin); } catch (_) { return; }
+      if (url.origin !== location.origin) return;
+      if (url.pathname === location.pathname) return;
+
+      e.preventDefault();
+      navigateTo(url.href, true);
+    });
+
+    window.addEventListener('popstate', function () {
+      navigateTo(location.href, false);
+    });
+  })();
+  </script>
+</body>
+</html>
