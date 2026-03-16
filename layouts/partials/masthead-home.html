@@ -1,17 +1,17 @@
 {{- $img := .Site.Params.mastheadImage | default "/images/masthead.jpg" -}}
 <div id="masthead-spacer"></div>
 <div class="masthead-home">
+  <img class="masthead-home__image"
+    src="{{ $img | relURL }}"
+    alt="{{ .Site.Params.mastheadAlt | default .Site.Title }}"
+    loading="eager" fetchpriority="high">
   <div class="masthead-home__inner">
-    <img class="masthead-home__image"
-      src="{{ $img | relURL }}"
-      alt="{{ .Site.Params.mastheadAlt | default .Site.Title }}"
-      loading="eager" fetchpriority="high">
     <div class="masthead-home__title">
       <h1 class="masthead-home__name">{{ .Site.Params.mastheadTitle | default .Site.Title }}</h1>
       {{- with .Site.Params.role -}}
       <p class="masthead-home__role">{{ partial "i18n.html" "guitarist" }}</p>
       {{- end -}}
     </div>
-    <p class="masthead-home__quote">{{ partial "i18n.html" "mastheadQuote" }}</p>
+
   </div>
 </div>

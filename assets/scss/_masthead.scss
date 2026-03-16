@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: $masthead-height;
   overflow: hidden;
 
   &__inner {
@@ -18,16 +19,17 @@
     position: relative;
     max-width: $max-width;
     margin: 0 auto;
+    z-index: 1;
   }
 
   &__image {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: $masthead-height;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 15%;
     display: block;
   }
 
