@@ -1,9 +1,37 @@
+- title: "スバン・アガワル & ニック・デバールによるリサイタル(ギターデュオ、ソロギター、ソロリュート)"
+  date: "2026-10-11"
+  venue: "クーラス・リサイタルホール、オーバリン音楽院"
+  location: "オーバリン、オハイオ州"
+  ticketURL: "https://www.oberlin.edu"
+  past: false
+  
+- title: "第9回台湾国際ギターコンクール - ファイナル・ラウンド"
+  date: "2026-07-16"
+  venue: "国家音楽ホール"
+  location: "台北、台湾"
+  ticketURL: "https://www.facebook.com/share/p/1DNWGTamUY/"
+  past: true
+  
+- title: "解釈実践セミナー"
+  date: "2026-05-19"
+  venue: "ラインギターフェスティバル"
+  location: "エンゲルス、ドイツ"
+  ticketURL: "https://rhineguitar.de/en/festival/seminar-practice-of-interpretation.html"
+  past: true
+  
+- title: "オーバリン・ギターデュオ - リサイタル"
+  date: "2026-05-15"
+  venue: "マインツ音楽大学(Hochschule für Musik Mainz)"
+  location: "マインツ、ドイツ"
+  ticketURL: "https://www.instagram.com/p/DYWbLgPCAKs/"
+  past: true
+
 - title: "ニューオーリンズ・ギター・フェスティバル"
   date: "2026-03-19"
   venue: "テュレーン大学"
   location: "ニューオーリンズ、ルイジアナ州"
   ticketURL: "https://events.tulane.edu/content/international-guitar-festival-elias-barreiro-young-artists-competition-semifinal-round"
-  past: false
+  past: true
 
 - title: "CSUギター・シンポジウム"
   date: "2026-03-01"
