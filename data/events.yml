@@ -1,9 +1,38 @@
+- title: "Recital featuring Suvan Agarwal and Nik Divall (guitar duo, solo guitar, solo lute)"
+    date: "2026-0"
+    venue: "Kulas Recital Hall, Oberlin Conservatory"
+    location: "Oberlin, Ohio"
+    ticketURL: "www.oberlin.edu"
+    past: false
+
+
+- title: "IX Taiwan Internationl Guitar Competition - Final Round"
+    date: "2026-07-16"
+    venue: "National Concert Hall"
+    location: "Taipei, Taiwan"
+    ticketURL: "https://www.facebook.com/share/p/1DNWGTamUY/"
+    past: true
+
+- title: "Seminar Practice of Interpretation"
+    date: "2026-05-19"
+    venue: "Rhine Guitar Festival"
+    location: "Engers, Germany"
+    ticketURL: "https://rhineguitar.de/en/festival/seminar-practice-of-interpretation.html"
+    past: true
+
+- title: "Oberlin Guitar Duo - Evening Recital"
+    date: "2026-05-15"
+    venue: "Hochschule fur Musik Mainz"
+    location: "Mainz, Germany"
+    ticketURL: "https://www.instagram.com/p/DYWbLgPCAKs/"
+    past: true
+  
   - title: "New Orleans Guitar Festival"
     date: "2026-03-19"
     venue: "Tulane University"
     location: "New Orleans, LA"
     ticketURL: "https://events.tulane.edu/content/international-guitar-festival-elias-barreiro-young-artists-competition-semifinal-round"
-    past: false
+    past: true
   
   - title: "CSU Guitar Symposium"
     date: "2026-03-01"
