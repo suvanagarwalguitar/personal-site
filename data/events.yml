@@ -1,8 +1,22 @@
+  - title: "Lecture Recital featuring Emmanuel Sowicz (lecture), Suvan Agarwal, and Nik Divall (guitar duo, solo guitar, solo lute)"
+    date: "2026-11-22"
+    venue: "Holywell Music Room"
+    location: "Oxford University, Oxford, United Kingdom"
+    ticketURL: "https://wadh-tuvok.wadham.ox.ac.uk/events.php"
+    past: false
+  
+  - title: "South Bay Guitar Society"
+    date: "2026-11-14"
+    venue: "Shared Arts Center"
+    location: "99 Notre Dame Ave., San Jose, California"
+    ticketURL: "https://sbgs.org/event-6740732"
+    past: false
+  
   - title: "Recital featuring Suvan Agarwal and Nik Divall (guitar duo, solo guitar, solo lute)"
     date: "2026-10-11"
     venue: "Kulas Recital Hall, Oberlin Conservatory"
     location: "Oberlin, Ohio"
-    ticketURL: "www.oberlin.edu"
+    ticketURL: "https://www.oberlin.edu"
     past: false
 
   - title: "IX Taiwan Internationl Guitar Competition - Final Round"
