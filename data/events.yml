@@ -17,19 +17,33 @@
     location: "Oxford University, Oxford, United Kingdom"
     ticketURL: "https://wadh-tuvok.wadham.ox.ac.uk/events.php"
     past: false
-  
+
+- title: "Masterclass for South Bay Guitar Society"
+    date: "2026-11-15"
+    venue: "Shared Arts Center"
+    location: "99 Notre Dame Ave., San Jose, California"
+    ticketURL: "https://sbgs.org/event-6740761"
+    past: false
+    
   - title: "Solo concert for South Bay Guitar Society"
     date: "2026-11-14"
     venue: "Shared Arts Center"
     location: "99 Notre Dame Ave., San Jose, California"
     ticketURL: "https://sbgs.org/event-6740732"
     past: false
-  
+
+  - title: "Masterclass for Oberlin Conservatory"
+    date: "2026-10-12"
+    venue: "Kulas Recital Hall, Oberlin Conservatory"
+    location: "Oberlin, Ohio"
+    ticketURL: "https://www.oberlin.edu/events/guest-recital-divall-agarwal-guitar-duo"
+    past: true
+    
   - title: "Recital featuring Suvan Agarwal and Nik Divall (Oberlin Guitar Duo, solo guitar, solo lute)"
     date: "2026-10-11"
     venue: "Kulas Recital Hall, Oberlin Conservatory"
     location: "Oberlin, Ohio"
-    ticketURL: "https://www.oberlin.edu"
+    ticketURL: "https://www.oberlin.edu/events/guest-recital-divall-agarwal-guitar-duo"
     past: true
 
   - title: "IX Taiwan Internationl Guitar Competition - Final Round"
