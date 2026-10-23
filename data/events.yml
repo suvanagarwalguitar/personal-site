@@ -5,7 +5,7 @@
     past: false
 
   - title: "Solo concert"
-    date: "2026-11-22"
+    date: "2026-11-29"
     venue: "Michael Batell Atelier"
     location: "Berlin, Germany"
     ticketURL: "https://www.classical-and-flamenco-guitars.com/concerts.html"
@@ -14,7 +14,7 @@
   - title: "Lecture Recital featuring Emmanuel Sowicz (lecture), Suvan Agarwal, and Nik Divall (Oberlin Guitar Duo, solo guitar, solo lute)"
     date: "2026-11-22"
     venue: "Holywell Music Room"
-    location: "Oxford University, Oxford, United Kingdom"
+    location: "Oxford University, Oxford, UK"
     ticketURL: "https://wadh-tuvok.wadham.ox.ac.uk/events.php"
     past: false
 
